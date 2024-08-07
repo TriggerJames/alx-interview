@@ -27,7 +27,6 @@ def pascal_triangle(n):
                 # Append the current value of C to the level
                 level.append(C)
 
-                # Calculate the next value of C using the binomial coefficient formula
                 C = C * (i - j) // j
 
             # Append the generated level to the result list
