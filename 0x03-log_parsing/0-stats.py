@@ -1,6 +1,7 @@
 #!/usr/bin/python3
 import sys
 
+
 def print_stats(total_size, status_codes):
     """Prints the accumulated metrics."""
     print(f"File size: {total_size}")
@@ -9,6 +10,8 @@ def print_stats(total_size, status_codes):
             print(f"{code}: {status_codes[code]}")
 
 # Initialize variables
+
+
 total_size = 0
 status_codes = {200: 0, 301: 0, 400: 0, 401: 0, 403: 0, 404: 0, 405: 0, 500: 0}
 line_count = 0
@@ -16,7 +19,7 @@ line_count = 0
 try:
     for line in sys.stdin:
         parts = line.split()
-        
+
         # Validate the format of the line
         if len(parts) > 6:
             # Extract the necessary components
