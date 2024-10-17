@@ -23,7 +23,7 @@ def isWinner(x, nums):
     if x < 1 or not nums:
         return None
 
-    # Precompute primes up to the largest number in nums using sieve of Eratosthenes
+
     max_n = max(nums)
     primes = sieve_of_eratosthenes(max_n)
     
@@ -41,7 +41,7 @@ def isWinner(x, nums):
             prime = primes_in_game.pop(0)
             primes_in_game = [p for p in primes_in_game if p % prime != 0]
             moves += 1
-        
+
         # If the number of moves is odd, Maria wins (she made the last move)
         if moves % 2 == 1:
             maria_wins += 1
