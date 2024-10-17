@@ -3,7 +3,8 @@
 
 
 def sieve_of_eratosthenes(n):
-    """Helper function to generate primes up to n using Sieve of Eratosthenes"""
+    """Helper function to generate primes
+    up to n using Sieve of Eratosthenes"""
     sieve = [True] * (n + 1)
     sieve[0] = sieve[1] = False
     for i in range(2, int(n ** 0.5) + 1):
@@ -23,10 +24,9 @@ def isWinner(x, nums):
     if x < 1 or not nums:
         return None
 
-
     max_n = max(nums)
     primes = sieve_of_eratosthenes(max_n)
-    
+
     # Track the number of wins for Maria and Ben
     maria_wins = 0
     ben_wins = 0
